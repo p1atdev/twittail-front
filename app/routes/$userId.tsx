@@ -1,4 +1,4 @@
-import { ActionFunction, LoaderFunction, redirect } from "@remix-run/cloudflare"
+import { ActionFunction, LoaderFunction, MetaFunction, redirect } from "@remix-run/cloudflare"
 import { Form, Links, Meta, Scripts, useActionData, useCatch, useLoaderData } from "@remix-run/react"
 import { User } from "types/user"
 import UserDetail from "~/components/detail"
@@ -31,6 +31,20 @@ export const action: ActionFunction = async ({ request }) => {
     const userId = body.get("userId")
 
     return redirect(`/${userId}`)
+}
+
+export const meta: MetaFunction = ({ data }: { data: LoaderData | undefined }) => {
+    if (!data) {
+        return {
+            title: "No User",
+            description: "User not found",
+        }
+    }
+    return {
+        title: `"${data.user.profile.userName}" のユーザー情報`,
+        description: `"${data.user.profile.userName}" の詳細なユーザー情報を見ることができます`,
+        "og:image": data.user.avatar.url,
+    }
 }
 
 export default function Page() {
