@@ -10,6 +10,10 @@ export const meta: MetaFunction = () => ({
     charset: "utf-8",
     title: "Twittail",
     viewport: "width=device-width,initial-scale=1",
+    "og:site_name": "Twittail",
+    "og:type": "website",
+    "og:locale": "ja_JP",
+    "twitter:card": "summary",
 })
 
 export default function App() {

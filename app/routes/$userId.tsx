@@ -41,8 +41,8 @@ export const meta: MetaFunction = ({ data }: { data: LoaderData | undefined }) =
         }
     }
     return {
-        title: `"${data.user.profile.userName}" のユーザー情報`,
-        description: `"${data.user.profile.userName}" の詳細なユーザー情報を見ることができます`,
+        title: `"${data.user.profile.userName}" の Twitter ユーザー情報`,
+        description: `"${data.user.profile.userName}" の詳細な Twitter ユーザー情報を見ることができます`,
         "og:image": data.user.avatar.url,
     }
 }
