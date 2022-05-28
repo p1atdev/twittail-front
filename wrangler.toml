@@ -1,10 +1,14 @@
-name = "remix-cloudflare-workers"
+name = "twittail"
 type = "javascript"
 
-zone_id = ""
 account_id = ""
 route = ""
 workers_dev = true
+zone_id = ""
+
+kv_namespaces = [
+  {binding = "Twittail_KV", id = "fb465115dff649e4acaf6fffd03c51a8"},
+]
 
 [site]
 bucket = "./public"
@@ -14,4 +18,4 @@ entry-point = "."
 command = "npm run build"
 
 [build.upload]
-format="service-worker"
+format = "service-worker"
