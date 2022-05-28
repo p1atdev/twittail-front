@@ -106,9 +106,13 @@ const UserDetail = ({ user }: Props) => {
                                 <tr>
                                     <td>プロフィールリンク</td>
                                     <td>
-                                        <a className="link link-primary" href={user?.profile.profileUrl ?? ""}>
-                                            {user?.profile.profileUrl ?? "ユーザープロフィールへの短縮リンク"}
-                                        </a>
+                                        {user ? (
+                                            <a className="link link-primary" href={user.profile.profileUrl}>
+                                                {user.profile.profileUrl}
+                                            </a>
+                                        ) : (
+                                            "ユーザープロフィールへの短縮リンク"
+                                        )}
                                     </td>
                                 </tr>
                                 <tr>

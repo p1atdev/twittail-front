@@ -16,6 +16,7 @@ export const meta: MetaFunction = () => ({
     title: "Twitter のユーザーの詳細情報を確認",
     description:
         "フォロー数やファボ数から、リストに入れられている数など、通常は見れないような情報も確認することができます",
+    "og:image": "https://twittail.p1atdev.workers.dev/twittail.png",
 })
 
 export default function Index() {
