@@ -32,9 +32,13 @@ const UserDetail = ({ user }: Props) => {
                                 <tr>
                                     <td>高画質URL</td>
                                     <td>
-                                        <a className="link link-primary" href={user ? user.avatar.url : ""}>
-                                            {user?.avatar.url ?? "アイコン画像の高画質URL"}
-                                        </a>
+                                        {user ? (
+                                            <a className="link link-primary" href={user.avatar.url}>
+                                                {user.avatar.url}
+                                            </a>
+                                        ) : (
+                                            "アイコン画像の高画質URL"
+                                        )}
                                     </td>
                                 </tr>
                                 <tr>
@@ -60,9 +64,13 @@ const UserDetail = ({ user }: Props) => {
                                 <tr>
                                     <td>URL</td>
                                     <td>
-                                        <a className="link link-primary" href={user?.banner.url ?? ""}>
-                                            {user?.banner.url ?? "バナー画像のURL"}
-                                        </a>
+                                        {user ? (
+                                            <a className="link link-primary" href={user?.banner.url}>
+                                                {user?.banner.url}
+                                            </a>
+                                        ) : (
+                                            "バナー画像のURL"
+                                        )}
                                     </td>
                                 </tr>
                             </tbody>
