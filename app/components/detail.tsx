@@ -103,7 +103,7 @@ const UserDetail = ({ user }: Props) => {
                                     <td>認証済み</td>
                                     <td>{user?.profile.isVerified ? "Yes" : "No"}</td>
                                 </tr>
-                                <tr>
+                                {/* <tr>
                                     <td>プロフィールリンク</td>
                                     <td>
                                         {user ? (
@@ -114,7 +114,7 @@ const UserDetail = ({ user }: Props) => {
                                             "ユーザープロフィールへの短縮リンク"
                                         )}
                                     </td>
-                                </tr>
+                                </tr> */}
                                 <tr>
                                     <td>登録日</td>
                                     <td>
